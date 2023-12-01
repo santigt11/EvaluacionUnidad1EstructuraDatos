@@ -19,6 +19,7 @@ public class Ventanilla {
                 this.id = id;
                 this.nroPersonasAten = nroPersonasAten;
         }
+    private Tramite tramite;
     
     public Integer getId() {
         return id;
@@ -34,5 +35,13 @@ public class Ventanilla {
 
     public void setNroPersonasAten(Integer nroPersonasAten) {
         this.nroPersonasAten = nroPersonasAten;
+    }
+
+    public Tramite getTramite() {
+        return tramite;
+    }
+
+    public void setTramite(Tramite tramite) {
+        this.tramite = tramite;
     }
 }

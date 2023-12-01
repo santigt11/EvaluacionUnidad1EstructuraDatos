@@ -37,14 +37,6 @@ public class VentanillaControl {
             return false;
         }
     }
-
-        public DynamicList<Ventanilla> getVentanillas() {
-                return ventanillas;
-        }
-
-        public void setVentanillas(DynamicList<Ventanilla> ventanillas) {
-                this.ventanillas = ventanillas;
-        }
         
     public Integer posVerificar() throws EmptyException {
 
@@ -69,4 +61,25 @@ public class VentanillaControl {
     public void setVentanilla(Ventanilla ventanilla) {
         this.ventanilla = ventanilla;
     }
+
+    public DynamicList<Ventanilla> getVentanillas() {
+        return ventanillas;
+    }
+
+    public void setVentanillas(DynamicList<Ventanilla> ventanillas) {
+        this.ventanillas = ventanillas;
+    }
+    
+//    public void calcularTiempo(){
+//        switch (getVentanilla().getTramite().getNombre()) {
+//            case "cambioClave":
+//                getVentanilla().getTramite().setTiempo(4);
+//            case "actualizacionDatos":
+//                getVentanilla().getTramite().setTiempo(7);
+//            case "asignacionAfiliados":
+//                getVentanilla().getTramite().setTiempo(15);
+//            default:
+//                throw new AssertionError();
+//        }
+//    }
 }
