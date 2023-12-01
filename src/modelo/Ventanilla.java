@@ -9,5 +9,22 @@ package modelo;
  * @author santi
  */
 public class Ventanilla {
-    
+    private Integer id;
+    private Integer nroPersonasAten;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getNroPersonasAten() {
+        return nroPersonasAten;
+    }
+
+    public void setNroPersonasAten(Integer nroPersonasAten) {
+        this.nroPersonasAten = nroPersonasAten;
+    }
 }
