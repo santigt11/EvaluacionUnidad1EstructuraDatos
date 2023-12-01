@@ -39,84 +39,84 @@ public class FrmSimulacion extends javax.swing.JFrame {
     public void guardar() {
         int aux = Integer.parseInt(txtNumeroVentanilla.getText().trim());
         int auxGenerar = Integer.parseInt(txtNumeroGenerar.getText().trim());
-        for (int i = 0; i < auxGenerar; i++) {
+        for (int i = 1; i < auxGenerar; i++) {
             switch (aux) {
                 case 1:
-                    switch (i) {
-                        case 0:
+                    if(i < 5){
                             control.getSimulacion().getVentanilla1().getTramite().setNombre(NombreTramite.ACTUALIZACIONDATOS);
                             control.persist(control.getSimulacion());
-                            tramites.add(control.getSimulacion().getVentanilla1().getTramite());
+                            tramites.add(control.getSimulacion().getVentanilla2().getTramite());
                             cargarTabla();
-                        case 1:
-                            control.getSimulacion().getVentanilla1().getTramite().setNombre(NombreTramite.ASIGNACIONAFILIADO);
+                    } 
+                    if(i < 10){
+                            control.getSimulacion().getVentanilla1().getTramite().setNombre(NombreTramite.ACTUALIZACIONDATOS);
                             control.persist(control.getSimulacion());
-                            tramites.add(control.getSimulacion().getVentanilla1().getTramite());
+                            tramites.add(control.getSimulacion().getVentanilla2().getTramite());
                             cargarTabla();
-                        case 2:
-                            control.getSimulacion().getVentanilla1().getTramite().setNombre(NombreTramite.CAMBIOCLAVE);
+                    } 
+                    if(i < 15){
+                            control.getSimulacion().getVentanilla1().getTramite().setNombre(NombreTramite.ACTUALIZACIONDATOS);
                             control.persist(control.getSimulacion());
-                            tramites.add(control.getSimulacion().getVentanilla1().getTramite());
+                            tramites.add(control.getSimulacion().getVentanilla2().getTramite());
                             cargarTabla();
-                        case 3:
-                            control.getSimulacion().getVentanilla1().getTramite().setNombre(NombreTramite.RECUPERACIONCLAVE);
+                    } 
+                    if(i < 20){
+                            control.getSimulacion().getVentanilla1().getTramite().setNombre(NombreTramite.ACTUALIZACIONDATOS);
                             control.persist(control.getSimulacion());
-                            tramites.add(control.getSimulacion().getVentanilla1().getTramite());
+                            tramites.add(control.getSimulacion().getVentanilla2().getTramite());
                             cargarTabla();
-                        default:
-                            throw new AssertionError();
-                    }
+                    } 
                 case 2:
-                    switch (i) {
-                        case 0:
+                    if(i < 5){
                             control.getSimulacion().getVentanilla2().getTramite().setNombre(NombreTramite.ACTUALIZACIONDATOS);
                             control.persist(control.getSimulacion());
                             tramites.add(control.getSimulacion().getVentanilla2().getTramite());
                             cargarTabla();
-                        case 1:
-                            control.getSimulacion().getVentanilla2().getTramite().setNombre(NombreTramite.ASIGNACIONAFILIADO);
+                    } 
+                    if(i < 10){
+                            control.getSimulacion().getVentanilla2().getTramite().setNombre(NombreTramite.ACTUALIZACIONDATOS);
                             control.persist(control.getSimulacion());
                             tramites.add(control.getSimulacion().getVentanilla2().getTramite());
                             cargarTabla();
-                        case 2:
-                            control.getSimulacion().getVentanilla2().getTramite().setNombre(NombreTramite.CAMBIOCLAVE);
+                    } 
+                    if(i < 15){
+                            control.getSimulacion().getVentanilla2().getTramite().setNombre(NombreTramite.ACTUALIZACIONDATOS);
                             control.persist(control.getSimulacion());
                             tramites.add(control.getSimulacion().getVentanilla2().getTramite());
                             cargarTabla();
-                        case 3:
-                            control.getSimulacion().getVentanilla2().getTramite().setNombre(NombreTramite.RECUPERACIONCLAVE);
+                    } 
+                    if(i < 20){
+                            control.getSimulacion().getVentanilla2().getTramite().setNombre(NombreTramite.ACTUALIZACIONDATOS);
                             control.persist(control.getSimulacion());
                             tramites.add(control.getSimulacion().getVentanilla2().getTramite());
                             cargarTabla();
-                        default:
-                            throw new AssertionError();
-                    }
+                    } 
 
                 case 3:
-                    switch (i) {
-                        case 0:
+                    if(i < 5){
                             control.getSimulacion().getVentanilla3().getTramite().setNombre(NombreTramite.ACTUALIZACIONDATOS);
                             control.persist(control.getSimulacion());
-                            tramites.add(control.getSimulacion().getVentanilla3().getTramite());
+                            tramites.add(control.getSimulacion().getVentanilla2().getTramite());
                             cargarTabla();
-                        case 1:
-                            control.getSimulacion().getVentanilla3().getTramite().setNombre(NombreTramite.ASIGNACIONAFILIADO);
+                    } 
+                    if(i < 10){
+                            control.getSimulacion().getVentanilla3().getTramite().setNombre(NombreTramite.ACTUALIZACIONDATOS);
                             control.persist(control.getSimulacion());
+                            tramites.add(control.getSimulacion().getVentanilla2().getTramite());
                             cargarTabla();
-                            tramites.add(control.getSimulacion().getVentanilla3().getTramite());
-                        case 2:
-                            control.getSimulacion().getVentanilla3().getTramite().setNombre(NombreTramite.CAMBIOCLAVE);
+                    } 
+                    if(i < 15){
+                            control.getSimulacion().getVentanilla3().getTramite().setNombre(NombreTramite.ACTUALIZACIONDATOS);
                             control.persist(control.getSimulacion());
-                            tramites.add(control.getSimulacion().getVentanilla3().getTramite());
+                            tramites.add(control.getSimulacion().getVentanilla2().getTramite());
                             cargarTabla();
-                        case 3:
-                            control.getSimulacion().getVentanilla3().getTramite().setNombre(NombreTramite.RECUPERACIONCLAVE);
+                    } 
+                    if(i < 20){
+                            control.getSimulacion().getVentanilla3().getTramite().setNombre(NombreTramite.ACTUALIZACIONDATOS);
                             control.persist(control.getSimulacion());
-                            tramites.add(control.getSimulacion().getVentanilla3().getTramite());
+                            tramites.add(control.getSimulacion().getVentanilla2().getTramite());
                             cargarTabla();
-                        default:
-                            throw new AssertionError();
-                    }
+                    } 
                 default:
                     throw new AssertionError();
             }
