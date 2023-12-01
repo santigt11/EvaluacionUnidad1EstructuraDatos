@@ -19,7 +19,6 @@ public class Ventanilla {
                 this.id = id;
                 this.nroPersonasAten = nroPersonasAten;
         }
-
     
     public Integer getId() {
         return id;
