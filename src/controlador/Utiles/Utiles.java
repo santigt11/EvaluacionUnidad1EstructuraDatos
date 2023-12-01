@@ -16,12 +16,10 @@ public class Utiles {
 
         try {
 
-            if (cedula.length() == 10) // ConstantesApp.LongitudCedula
+            if (cedula.length() == 10)
             {
                 int tercerDigito = Integer.parseInt(cedula.substring(2, 3));
                 if (tercerDigito < 6) {
-// Coeficientes de validación cédula
-// El decimo digito se lo considera dígito verificador
                     int[] coefValCedula = {2, 1, 2, 1, 2, 1, 2, 1, 2};
                     int verificador = Integer.parseInt(cedula.substring(9, 10));
                     int suma = 0;
