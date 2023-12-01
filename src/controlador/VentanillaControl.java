@@ -66,8 +66,7 @@ public class VentanillaControl {
     public void setVentanillas(DynamicList<Ventanilla> ventanillas) {
         this.ventanillas = ventanillas;
     }
-    
-//    public void calcularTiempo(){
+//        public Integer calcularTiempo(){
 //        switch (getVentanilla().getTramite().getNombre()) {
 //            case "cambioClave":
 //                getVentanilla().getTramite().setTiempo(4);
@@ -78,5 +77,7 @@ public class VentanillaControl {
 //            default:
 //                throw new AssertionError();
 //        }
+//        Integer tiempoTotal = (getVentanilla().getTramite().getTiempo());
+//        return  tiempoTotal;
 //    }
 }

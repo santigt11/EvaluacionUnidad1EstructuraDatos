@@ -4,15 +4,26 @@
  */
 package modelo;
 
+import enumeracion.NombreTramite;
+
 /**
  *
  * @author santi
  */
 public class Tramite {
     private Integer id;
-    private String nombre;
+    private NombreTramite nombre;
     private Integer tiempo;
 
+    public Tramite(Integer id, NombreTramite nombre, Integer tiempo) {
+        this.id = id;
+        this.nombre = nombre;
+        this.tiempo = tiempo;
+    }
+
+    public Tramite() {
+    }
+    
     public Integer getId() {
         return id;
     }
@@ -21,19 +32,35 @@ public class Tramite {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public Integer getTiempo() {
+        switch (nombre) {
+            case CAMBIOCLAVE:
+                tiempo = 4;
+                break;
+            case ACTUALIZACIONDATOS:
+                tiempo = 7;
+                break;
+            case ASIGNACIONAFILIADO:
+                tiempo = 15;
+                break;
+            case RECUPERACIONCLAVE:
+                tiempo = 3;
+                break;
+            default:
+                throw new AssertionError();
+        }
         return tiempo;
     }
 
     public void setTiempo(Integer tiempo) {
         this.tiempo = tiempo;
+    }
+
+    public NombreTramite getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(NombreTramite nombre) {
+        this.nombre = nombre;
     }
 }

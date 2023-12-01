@@ -11,7 +11,25 @@ package modelo;
 public class Ventanilla {
     private Integer id;
     private Integer nroPersonasAten;
+    private Integer tiempoTotal;
     private Tramite tramite;
+
+    public Ventanilla(Integer id, Integer nroPersonasAten, Tramite tramite) {
+        this.id = id;
+        this.nroPersonasAten = nroPersonasAten;
+        this.tramite = tramite;
+    }
+
+    public Ventanilla() {
+    }
+
+    public Integer getTiempoTotal() {
+        return tiempoTotal;
+    }
+
+    public void setTiempoTotal(Integer tiempoTotal) {
+        this.tiempoTotal = tiempoTotal;
+    }
     
     public Integer getId() {
         return id;

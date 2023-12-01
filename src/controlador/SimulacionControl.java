@@ -2,7 +2,6 @@ package controlador;
 
 import controlador.TDA.listas.DynamicList;
 import controlador.TDA.listas.Exception.EmptyException;
-import modelo.Persona;
 import modelo.Simulacion;
 
 public class SimulacionControl {
