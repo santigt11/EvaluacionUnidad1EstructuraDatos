@@ -21,9 +21,9 @@ public class Utiles {
                                         return 3;
                         default:
                                 throw new AssertionError();
-
+        }
     //Codigo para validar la cedula
-    public static boolean validadorDeCedula(String cedula) {
+    /*public static boolean validadorDeCedula(String cedula) {
         boolean cedulaCorrecta = false;
 
         try {
@@ -51,5 +51,6 @@ public class Utiles {
                 } else {
                     cedulaCorrecta = false;
                 }
-        } 
+        } */
+        }
 }

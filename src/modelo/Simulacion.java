@@ -32,7 +32,10 @@ public class Simulacion {
     }
 
     public Ventanilla getVentanilla1() {
-        return ventanilla1;
+        if(ventanilla1 == null){
+                ventanilla1 = new Ventanilla();
+        }
+            return ventanilla1;
     }
 
     public void setVentanilla1(Ventanilla ventanilla1) {
@@ -40,15 +43,22 @@ public class Simulacion {
     }
 
     public Ventanilla getVentanilla2() {
-        return ventanilla2;
+        if(ventanilla2 == null){
+                ventanilla2 = new Ventanilla();
+        }
+            return ventanilla2;
     }
 
     public void setVentanilla2(Ventanilla ventanilla2) {
         this.ventanilla2 = ventanilla2;
     }
-
+    
+    
     public Ventanilla getVentanilla3() {
-        return ventanilla3;
+        if(ventanilla3 == null){
+                ventanilla3 = new Ventanilla();
+        }
+            return ventanilla3;
     }
 
     public void setVentanilla3(Ventanilla ventanilla3) {
