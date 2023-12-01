@@ -66,4 +66,17 @@ public class VentanillaControl {
     public void setVentanillas(DynamicList<Ventanilla> ventanillas) {
         this.ventanillas = ventanillas;
     }
+    
+//    public void calcularTiempo(){
+//        switch (getVentanilla().getTramite().getNombre()) {
+//            case "cambioClave":
+//                getVentanilla().getTramite().setTiempo(4);
+//            case "actualizacionDatos":
+//                getVentanilla().getTramite().setTiempo(7);
+//            case "asignacionAfiliados":
+//                getVentanilla().getTramite().setTiempo(15);
+//            default:
+//                throw new AssertionError();
+//        }
+//    }
 }
