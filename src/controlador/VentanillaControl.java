@@ -5,19 +5,29 @@ import controlador.TDA.listas.Exception.EmptyException;
 import modelo.Ventanilla;
 
 public class VentanillaControl {
+        private Ventanilla ventanilla = new Ventanilla();
+        private DynamicList<Ventanilla> ventanillas;
 
-    private Ventanilla ventanilla = new Ventanilla();
-    private DynamicList<Ventanilla> ventanillas;
+        public VentanillaControl() {
+        }
 
-    public VentanillaControl(Ventanilla ventanilla) {
-        this.ventanilla = ventanilla;
-    }
+        public Ventanilla getVentanilla() {
+                if (ventanilla == null) {
+                        ventanilla = new Ventanilla();
+                }
+                return ventanilla;
+        }
 
-    public VentanillaControl() {
-        this.ventanillas = new DynamicList<>();
-    }
+        public void setVentanilla(DynamicList<Ventanilla> ventanilla) {
+                this.ventanillas = ventanillas;
+        }
 
-    //Metodo que permite guardar
+        public VentanillaControl(DynamicList<Ventanilla> ventanillas) {
+                this.ventanillas = ventanillas;
+        }
+   
+        
+         //Metodo que permite guardar
     public Boolean guardar() {
         try {
             getVentanilla().setId(getVentanillas().getLength());
@@ -27,7 +37,7 @@ public class VentanillaControl {
             return false;
         }
     }
-
+        
     public Integer posVerificar() throws EmptyException {
 
         Integer bandera = 0;
@@ -46,13 +56,6 @@ public class VentanillaControl {
         for (int i = 0; i < this.getVentanillas().getLength(); i++) {
             System.out.println(getVentanillas().getInfo(i));
         }
-    }
-
-    public Ventanilla getVentanilla() {
-        if (ventanilla == null) {
-            ventanilla = new Ventanilla();
-        }
-        return ventanilla;
     }
 
     public void setVentanilla(Ventanilla ventanilla) {

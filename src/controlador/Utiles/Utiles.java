@@ -4,11 +4,23 @@
  */
 package controlador.Utiles;
 
-/**
- *
- * @author santi
- */
+import modelo.Tramite;
+
+
 public class Utiles {
+        
+        public Integer calcularTiempo(Tramite tramite){
+                switch (tramite.getNombre()) {
+                        case "CAMBIAR":
+                                        return 4;
+                        case "ACTUALIZAR":
+                                        return 7;
+                        case "ASIGNAR":
+                                        return 15;
+                        case "RECUPERAR":
+                                        return 3;
+                        default:
+                                throw new AssertionError();
 
     //Codigo para validar la cedula
     public static boolean validadorDeCedula(String cedula) {
@@ -39,19 +51,5 @@ public class Utiles {
                 } else {
                     cedulaCorrecta = false;
                 }
-            } else {
-                cedulaCorrecta = false;
-            }
-        } catch (NumberFormatException nfe) {
-            cedulaCorrecta = false;
-        } catch (Exception err) {
-            System.out.println("Una excepcion ocurrio en el proceso de validadcion");
-            cedulaCorrecta = false;
-        }
-
-        if (!cedulaCorrecta) {
-            System.out.println("La Cédula ingresada es Incorrecta");
-        }
-        return cedulaCorrecta;
-    }
+        } 
 }
