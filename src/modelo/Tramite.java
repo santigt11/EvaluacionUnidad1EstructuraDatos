@@ -11,25 +11,15 @@ import enumeracion.NombreTramite;
  * @author santi
  */
 public class Tramite {
-    private Integer id;
     private NombreTramite nombre;
     private Integer tiempo;
 
     public Tramite(Integer id, NombreTramite nombre, Integer tiempo) {
-        this.id = id;
         this.nombre = nombre;
         this.tiempo = tiempo;
     }
 
     public Tramite() {
-    }
-    
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public Integer getTiempo() {
