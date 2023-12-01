@@ -1,32 +1,69 @@
 package controlador;
 
 import controlador.TDA.listas.DynamicList;
+import controlador.TDA.listas.Exception.EmptyException;
+import modelo.Ventanilla;
 
 public class VentanillaControl {
-        private VentanillaControl ventanilla;
-        private DynamicList<VentanillaControl> ventanillas;
 
-        public VentanillaControl() {
-        }
+    private Ventanilla ventanilla = new Ventanilla();
+    private DynamicList<Ventanilla> ventanillas;
 
-        public VentanillaControl(VentanillaControl ventanilla, DynamicList<VentanillaControl> ventanillas) {
-                this.ventanilla = ventanilla;
-                this.ventanillas = ventanillas;
-        }
+    public VentanillaControl(Ventanilla ventanilla) {
+        this.ventanilla = ventanilla;
+    }
 
-        public VentanillaControl getVentanilla() {
-                return ventanilla;
-        }
+    public VentanillaControl() {
+        this.ventanillas = new DynamicList<>();
+    }
 
-        public void setVentanilla(VentanillaControl ventanilla) {
-                this.ventanilla = ventanilla;
+    //Metodo que permite guardar
+    public Boolean guardar() {
+        try {
+            getVentanilla().setId(getVentanillas().getLength());
+            getVentanillas().add(getVentanilla());
+            return true;
+        } catch (Exception e) {
+            return false;
         }
+    }
 
-        public DynamicList<VentanillaControl> getVentanillas() {
-                return ventanillas;
-        }
+    public Integer posVerificar() throws EmptyException {
 
-        public void setVentanillas(DynamicList<VentanillaControl> ventanillas) {
-                this.ventanillas = ventanillas;
+        Integer bandera = 0;
+
+        for (Integer i = 0; i <= this.ventanillas.getLength(); i++) {
+
+            if (this.getVentanillas().getInfo(i) == null) {
+                bandera = i;
+                break;
+            }
         }
+        return bandera;
+    }
+
+    public void imprimir() throws EmptyException {
+        for (int i = 0; i < this.getVentanillas().getLength(); i++) {
+            System.out.println(getVentanillas().getInfo(i));
+        }
+    }
+
+    public Ventanilla getVentanilla() {
+        if (ventanilla == null) {
+            ventanilla = new Ventanilla();
+        }
+        return ventanilla;
+    }
+
+    public void setVentanilla(Ventanilla ventanilla) {
+        this.ventanilla = ventanilla;
+    }
+
+    public DynamicList<Ventanilla> getVentanillas() {
+        return ventanillas;
+    }
+
+    public void setVentanillas(DynamicList<Ventanilla> ventanillas) {
+        this.ventanillas = ventanillas;
+    }
 }

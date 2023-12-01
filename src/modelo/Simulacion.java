@@ -11,6 +11,9 @@ package modelo;
 public class Simulacion {
     private Integer id;
     private String nombre;
+    private Ventanilla ventanilla1;
+    private Ventanilla ventanilla2;
+    private Ventanilla ventanilla3;
 
     public Integer getId() {
         return id;
@@ -26,5 +29,29 @@ public class Simulacion {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public Ventanilla getVentanilla1() {
+        return ventanilla1;
+    }
+
+    public void setVentanilla1(Ventanilla ventanilla1) {
+        this.ventanilla1 = ventanilla1;
+    }
+
+    public Ventanilla getVentanilla2() {
+        return ventanilla2;
+    }
+
+    public void setVentanilla2(Ventanilla ventanilla2) {
+        this.ventanilla2 = ventanilla2;
+    }
+
+    public Ventanilla getVentanilla3() {
+        return ventanilla3;
+    }
+
+    public void setVentanilla3(Ventanilla ventanilla3) {
+        this.ventanilla3 = ventanilla3;
     }
 }

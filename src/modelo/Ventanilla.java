@@ -11,7 +11,8 @@ package modelo;
 public class Ventanilla {
     private Integer id;
     private Integer nroPersonasAten;
-
+    
+    
     public Integer getId() {
         return id;
     }
