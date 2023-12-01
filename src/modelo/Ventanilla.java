@@ -48,7 +48,10 @@ public class Ventanilla {
     }
 
     public Tramite getTramite() {
-        return tramite;
+            if (tramite == null) {
+                    tramite = new Tramite();
+            }
+            return tramite;
     }
 
     public void setTramite(Tramite tramite) {
