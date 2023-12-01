@@ -1,32 +1,46 @@
 package controlador;
 
 import controlador.TDA.listas.DynamicList;
+import modelo.Ventanilla;
 
 public class VentanillaControl {
-        private VentanillaControl ventanilla;
-        private DynamicList<VentanillaControl> ventanillas;
+        private Ventanilla ventanilla = new Ventanilla();
+        private DynamicList<Ventanilla> ventanillas;
 
         public VentanillaControl() {
         }
 
-        public VentanillaControl(VentanillaControl ventanilla, DynamicList<VentanillaControl> ventanillas) {
-                this.ventanilla = ventanilla;
+        public VentanillaControl(DynamicList<Ventanilla> ventanillas) {
                 this.ventanillas = ventanillas;
         }
 
-        public VentanillaControl getVentanilla() {
+        
+
+        public Ventanilla getVentanilla() {
+                if (ventanilla == null) {
+                        ventanilla = new Ventanilla();
+                }
                 return ventanilla;
         }
 
-        public void setVentanilla(VentanillaControl ventanilla) {
-                this.ventanilla = ventanilla;
+        public void setVentanilla(DynamicList<Ventanilla> ventanilla) {
+                this.ventanillas = ventanillas;
         }
 
-        public DynamicList<VentanillaControl> getVentanillas() {
+        public DynamicList<Ventanilla> getVentanillas() {
                 return ventanillas;
         }
 
-        public void setVentanillas(DynamicList<VentanillaControl> ventanillas) {
+        public void setVentanillas(DynamicList<Ventanilla> ventanillas) {
                 this.ventanillas = ventanillas;
+        }
+        
+        public Boolean guardar(){
+                try {
+                        getVentanillas().add(getVentanilla());
+                        return true;
+                } catch (Exception e) {
+                        return false;
+                }
         }
 }

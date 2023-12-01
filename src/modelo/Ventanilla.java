@@ -12,6 +12,15 @@ public class Ventanilla {
     private Integer id;
     private Integer nroPersonasAten;
 
+        public Ventanilla() {
+        }
+
+        public Ventanilla(Integer id, Integer nroPersonasAten) {
+                this.id = id;
+                this.nroPersonasAten = nroPersonasAten;
+        }
+
+    
     public Integer getId() {
         return id;
     }
