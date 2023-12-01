@@ -5,6 +5,10 @@
 package modelo;
 
 import enumeracion.NombreTramite;
+import static enumeracion.NombreTramite.ACTUALIZACIONDATOS;
+import static enumeracion.NombreTramite.ASIGNACIONAFILIADO;
+import static enumeracion.NombreTramite.CAMBIOCLAVE;
+import static enumeracion.NombreTramite.RECUPERACIONCLAVE;
 
 /**
  *
@@ -14,15 +18,19 @@ public class Tramite {
     private NombreTramite nombre;
     private Integer tiempo;
 
-    public Tramite(Integer id, NombreTramite nombre, Integer tiempo) {
+    public Tramite(Integer id, NombreTramite nombre) {
         this.nombre = nombre;
-        this.tiempo = tiempo;
+        calcularTiempo();
     }
 
     public Tramite() {
     }
 
     public Integer getTiempo() {
+        return tiempo;
+    }
+    
+    public void calcularTiempo(){
         switch (nombre) {
             case CAMBIOCLAVE:
                 tiempo = 4;
@@ -39,9 +47,8 @@ public class Tramite {
             default:
                 throw new AssertionError();
         }
-        return tiempo;
     }
-
+    
     public void setTiempo(Integer tiempo) {
         this.tiempo = tiempo;
     }

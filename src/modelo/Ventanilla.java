@@ -4,6 +4,8 @@
  */
 package modelo;
 
+import controlador.TDA.listas.DynamicList;
+
 /**
  *
  * @author santi
@@ -12,13 +14,14 @@ public class Ventanilla {
     private Integer id;
     private Integer nroPersonasAten;
     private Integer tiempoTotal;
-    private Tramite tramite;
+    private DynamicList<Tramite> tramites;
 
-    public Ventanilla(Integer id, Integer nroPersonasAten, Tramite tramite) {
+    public Ventanilla(Integer id, Integer nroPersonasAten, Integer tiempoTotal, DynamicList<Tramite> tramites) {
         this.id = id;
         this.nroPersonasAten = nroPersonasAten;
-        this.tramite = tramite;
-    }
+        this.tiempoTotal = tiempoTotal;
+        this.tramites = tramites;
+    }    
 
     public Ventanilla() {
     }
@@ -47,14 +50,14 @@ public class Ventanilla {
         this.nroPersonasAten = nroPersonasAten;
     }
 
-    public Tramite getTramite() {
-            if (tramite == null) {
-                    tramite = new Tramite();
+    public DynamicList<Tramite> getTramites() {
+            if (tramites == null) {
+                    tramites = new DynamicList<>();
             }
-            return tramite;
+            return tramites;
     }
 
-    public void setTramite(Tramite tramite) {
-        this.tramite = tramite;
+    public void setTramites(DynamicList<Tramite> tramites) {
+        this.tramites = tramites;
     }
 }
